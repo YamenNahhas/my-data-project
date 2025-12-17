@@ -1,0 +1,48 @@
+In diesem Dataset die meisten haben Diabetes Type 2 (59.8%). Nur 0.1% haben Diabetes Type 1 und 0.3% haben Gestationsdiabetes. Der Anzahl von males und females in diesem Datenset sind fast gleich. 
+
+**Kategorische Spalten**
+
+Diese inklusiv gender, ethnicity, education_level, income_level, employment_status und smoking_status.
+Hier gibt keinen Einfluss von diesen Spalten auf Zielvariablen(diagnosed_diabetes, diabetes_stage). gender (Geschlecht) hat hier fast keinen Einfluss beim Auftretten von Diabetes.
+
+**Numerische Spalten mit Anzahl der einzigartigen Werten weniger als 20**
+
+Diese Spalten können wie categoric Spalten mit Säulendiagram(bar) visualisiert werden.
+Diese inklusiv alcohol_consumption_per_week, family_history_diabetes, hypertension_history und cardiovascular_history. Bei alcohol_consumption_per_week habe ich gefunden dass beim hoheren Alkoholkonsum gibt es keine ausreichende Data zur Bewertung und Interpretation. Deshalb kann ich die Wirkung von alkohol auf dem Auftreten von Diabetes beim hoheren Konsum von alkohol nicht interpretieren. Beim niedrigen Konsum von Alkohol pro Woche ist die Wirkung von Alkohol auf dem Auftreten von Diabetes ausgeschlossen. Wissenschaftlich soll der hohe Konsum von Alkohol zum höheren Auftritt von Diabetes führen. Aber können wir das hier nicht bestätigen. 
+Family_history_diabetes hat hier einen großen positiven Einfluss beim Auftreten von Diabetes, besonders beim Diabetes Type 2. Es gibt hier einen Sprung beim Auftreten von Diabetes Type 2 von 54,65% bei negativen Familiengeschichten von Diabetes zu 78% bei positiven Familiengeschichten im Vergleich zu den anderen Kategorian bei diabetes_stage Spalte. Ich sehe auch diesen Sprung beim positiven diagnosed_diabetes von 54,9% bei den negativen Familiengeschichten von Diabetes zu 78,3% bei positiven Familiengeschichten. Ich gehe davon aus, dass die genetische Überlagerung einen großen Einfluss auf dem Auftreten von Diabetes hat, besonders bei Diabetes Type 2.
+hypertension_history und cardiovascular_history haben nur einen geringeren Einfluss auf dem Auftreten von Diabetes.
+
+**Numerische Spalten mit Anzahl der einzigartigen Werten mehr als 20**
+
+Diese Spalten können mit Histogram oder Boxplot visualisiert werden. Diese Spalten inklusiv age, physical_activity_minutes_per_week, sleep_hours_per_day, screen_time_hours_per_day, bmi, waist_to_hip_ratio, systolic_bp, diastolic_bp, heart_rate, cholesterol_total, hdl_cholesterol, ldl_cholesterol, triglycerides, 
+glucose_fasting, hba1c, glucose_postprandial, Diabetes_risk_score und insulin_level.
+Bei der Gruppierung von diabetes_stage kategorien mit Alter kann ich bemerken dass Menschen mit diabetes Type 2 die älteste und Menschen mit Typ-1-Diabetes die jüngste Gruppe in diesem Datensatz sind. Das Mittlewertalter bei positive diagnosed_diabetes bleibt größer als das bei negative diagnosed_diabetes in allen Geschlechtergruppen. glucose_fasting, hba1c, glucose_postprandial und Diabetes_risk_score sind wichtige Faktoren beim Auftreten und diagnose von Diabetes.
+
+**Lineare Regression**
+
+Variablen(age, glucose_fasting) zeigen eine sehr gute positive lineare Beziehung mit diabetes_risk_score. Auf der anderen Seite zeigt die Variable(physical_activity_minutes_per_week) eine negative lineare Beziehung mit diabetes_risk_score. je mehr Physikalische Activitäten desto weniger diabetes_risk_score und als Folge weniger Auftritt von Diabetes.
+Außerdem zeigen die Variablen(waist_to_hip_ratio, triglycerides, insulin_level) eine positive gute lineare Beziehung zum bmi. Hohe Werte von triglycerides und zunehmende insulin level könnten mit Gewichtszunahme begleitet sein.
+Darüber hinaus zeigt die Variable(systolic_bp) eine positive gute lineare Beziehung zum Alter. In anderen Wörtern tritt der systolische Bluthochdruck bei älteren Menschen häufiger auf als bei jüngere Menschen. 
+
+**Logistische Regression**
+Die Variable „diagnosed_diabetes“ ist eine binäre Spalte und eignet sich für die logistische Regression. Ich habe festgestellt, dass die Variablen (glucose_fasting, hba1c, glucose_postprandial, diabetes_risk_score) verwendet werden können, um sehr gute Modelle für die logistische Regression mit die Zielvariable(diagnosed_diabetes) zu erstellen (hohe Pseudo-R-Quadrat-Werte).
+Für hba1c entspricht eine Wahrscheinlichkeit von 50 % einem Wert von 6,29 %. Eine Wahrscheinlichkeit von 65 % entspricht einem Wert von 6,46 %. Ab diesem Wert dominiert fast ausschließlich positiv diagnosed_diabetes, und wir sehen kaum Menschen ohne Diabetes.
+Für glucose_postprandial entspricht eine Wahrscheinlichkeit von 50 % einem Wert von 150,56 mg/dl. Eine Wahrscheinlichkeit von 62 % entspricht einem Wert von 157,09 mg/dl. Ab diesem Wert dominiert fast ausschließlich positiv diagnosed_diabetes, und wir sehen kaum Menschen ohne Diabetes.
+Für glucose_fasting entspricht eine Wahrscheinlichkeit von 50 % einem Wert von 106,07 mg/dl. Dieser Wert liegt im Bereich Prädiabetes(Risikogruppe) laut Leitlinien der ADA/WHO.
+Für diabetes_risk_score entspricht eine Wahrscheinlichkeit von 50 % einem Wert von 23,84. Ab einem Wert von 20 gilt das Diabetesrisiko als sehr hoch.
+
+Ich habe dazu auf Diabetes Type 2 focusiert. Bei diabetes_stage Spalte habe ich einen neuen Datafram gemacht die nur Diabetes Type 2 und No_Diabetes enthält. Danach habe ich Type 2 durch 1 und No_Diabetes durch 0 ersetzt. Ich bekomme am Ende diabetes_stage als binäre Spalte. Diese neue Spalte eignet sich für die logistische Regression. Ich habe festgestellt, dass die Variablen (glucose_fasting, hba1c, glucose_postprandial, diabetes_risk_score) auch verwendet werden können, um sehr gute Modelle für die logistische Regression mit die Zielvariable(diabetes_stage) zu erstellen (hohe Pseudo-R-Quadrat-Werte).
+Ich habe gefunden, dass die linearen Beziehungen mit diesen Variablen im Vergleich zu diagnosed_diabetes relativ viel besser sind.
+Für hba1c entspricht eine Wahrscheinlichkeit von 50 % einem Wert von 5,53 %. Eine Wahrscheinlichkeit von 65 % entspricht einem Wert von 5,67 %. Diese zwei Werte liegen im normalen Bereich laut Leitlinien der ADA/WHO. Histogram zeigt einige Diabetes Type 2 Fällen in diesem Bereich. Der Prödiabeticsbereich beginnt ab dem Wert 5,7%. wir können das interpretieren dass diese Patienten schon als Diabetiker Type 2 festgestellt wurden und jetzt eine Behandlung bekommen um glucose im Blut zu senken.
+Für glucose_postprandial entspricht eine Wahrscheinlichkeit von 50 % einem Wert von 122,98 mg/dl. Eine Wahrscheinlichkeit von 85 % entspricht einem Wert von 141,12 mg/dl. Ab diesem Wert beherrscht Diabetes Type 2. Aber dieser Wert liegt in Prädiabeticsbereich laut Leitlinien der ADA/WHO. Wir können das auch interpretieren dass diese Patienten schon als Diabetiker Type 2 festgestellt wurden und jetzt eine Behandlung bekommen um glucose im Blut zu senken.
+Für glucose_fasting entspricht eine Wahrscheinlichkeit von 50 % einem Wert von 93,71 mg/dl. Eine Wahrscheinlichkeit von 77 % entspricht einem Wert von 98,58 mg/dl. Diese zwei Werte liegen im normalen Bereich laut Leitlinien der ADA/WHO. Der Prödiabeticsbereich beginnt ab dem Wert 100 mg/dl. Wir können das interpretieren dass diese Patienten schon als Diabetiker Type 2 festgestellt wurden und jetzt eine Behandlung bekommen um glucose im Blut zu senken.
+Für diabetes_risk_score entspricht eine Wahrscheinlichkeit von 50 % einem Wert von 12,19. Eine Wahrscheinlichkeit von 65 % entspricht einem Wert von 16,94. Eine Wahrscheinlichkeit von 85 % entspricht einem Wert von 25,78. Ab diesem Wert beherrscht Diabetes Type(2) und hat eine spitze wie gezeigt bei histogram. Wie gehen davon aus dass die Leute ab diesem Wert bekommen mit sehr hoher Warscheinlichkeit diabetes Type(2) nach ein paar Jahren.
+
+In diesem neuen Dataset identifiziert die logistische Regression Diabetes Typ 2 auch bei HbA1c-, Nüchtern- und postprandialen Glukosewerten im normoglykämischen Bereich laut Leitlinien der ADA/WHO. Dies deutet darauf hin, dass ein relevanter Anteil der Typ-2-Diabetiker in der Stichprobe pharmakologisch oder durch Lebensstilinterventionen behandelt wird, sodass aktuelle Biomarkerwerte nicht mehr die ursprüngliche metabolische Dysfunktion widerspiegeln.
+
+**Clustering mit K-Means und Visualisierung durch PCA**:
+Ich möchte Untergruppen von Personen mit ähnlichen Stoffwechselprofilen identifizieren. Zumerst sollte ich eine One-Hot-Kodierung für kategoriale Spalten und eine Standardskalierung für numerische Spalten (mit Ausnahme der Zielvariablen) durchführen. Anschließend habe ich vor dem Clustering eine PCA verwendet, um interpretierbare Achsen zu generieren. Ich habe hier 5 PCA-Komponenten beibehalten. Ich habe K-Means mit k=3 zumerst verwendet, um 3 Gruppen zu finden. Am Ende habe ich die X-Achse mit PCA1 und die Y-Achse mit PCA2 festgelegt. Hier wurden nur PCA1 und PCA2 ausgewählt, da PCA1 die größte Varianz in den Daten erklärt und PCA2 die zweitgrößte Varianz.
+Ich sehe drei klar voneinander getrennte Cluster in der Grafik. Jede Achse enthält alle medizinischen Variablen, jedoch unterschiedlich gewichtet. Für mich ist die X-Achse wichtig, die PCA 1 darstellt. 
+Die wichtigsten Merkmale für PCA1 sind die Indikatoren für Diabetes(diabetes_risk_score, hba1c, glucose_fasting, glucose_postprandial, diagnosed_diabetes, family_history_diabetes). In anderen Worten ist PCA1 der Schweregrad von Diabetes.
+Ich habe auch versucht mit k=2 zwei Cluster zu erstellen. Ich finde dass zwei Cluster besser bleiben für die genaue Bestimmung der Grenze bei PCA1.
+Cluster 0 zeigt niedrigere PCA1 Werte und ist die metabolische Referenzgruppe. Er repräsentiert relative gesunde Personen in diesem Dataset. Cluster 1 zeigt hohe PCA1 Werte und ist der metabolisch belastete Diabetes-Cluster.
