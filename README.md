@@ -76,10 +76,9 @@ uv sync
 
 Notebooks in dieser Reihenfolge ausführen:
 1. notebooks/01_exploration.ipynb
-<!--
-2. nootbooks/my_project.ipynb
-3. notebooks/preperation_and_processing.ipynb
-4. notebooks/Visualization_and_discussion.ipynb
+2. nootbooks/diabetes.ipynb
+3. notebooks/diabetes_preperation_and_processing.ipynb
+4. notebooks/diabetes_visualization_and_discussion.ipynb
 -->
 
 
