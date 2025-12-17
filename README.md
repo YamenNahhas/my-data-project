@@ -42,18 +42,18 @@ Für dein Projekt kannst du die folgenden Abschnitte in der `README.md` Datei an
 
 # [DEIN PROJEKTTITEL HIER] 🚀
 
-> Eine kurze, prägnante Beschreibung deines Data Science Projekts in 1-2 Sätzen.
+> Hier geht es um diabetes dataset von kaggle. Dieses Dataset besteht aus 100.000 Zeilen und 32 Spalten inklusiv demographics, lifestyle, medical history und clinical meaurements.
 
 ## 📊 Projektübersicht
 
 **Problemstellung:** 
-<!-- Beschreibe das Problem, das du lösen möchtest -->
+Diese Erkrankung ist hochgradig heterogen. Patienten mit gleicher Diagnose zeigen sehr unterschiedliche metabolische Profile. Klassische Grenzwerte (z. B. HbA1c ≥ 6.5 %) erfassen diese Heterogenität nur unzureichend. Therapieeffekte senken Biomarker, Diagnose bleibt bestehen.
 
 **Ziel:** 
-<!-- Was ist das Hauptziel deines Projekts? -->
+Besser Verständnis von Risikofaktoren. Tieferes Verständnis der metabolischen Heterogenität von Diabetes und ergänzt klassische medizinische Grenzwerte durch probabilistische und clusterbasierte Erkenntnisse.
 
 **Methoden:** 
-<!-- Welche Techniken/Algorithmen verwendest du? -->
+Cleaning, Exploratory Data Analysis(EDA), Grouppierung, Lineare Regression, Logistische Regression, Clustering, Visualisierung mit matplotlib
 
 
 
@@ -77,9 +77,9 @@ uv sync
 Notebooks in dieser Reihenfolge ausführen:
 1. notebooks/01_exploration.ipynb
 <!--
-2. notebooks/02_preprocessing.ipynb
-3. notebooks/03_modeling.ipynb
-4. notebooks/04_results.ipynb
+2. nootbooks/my_project.ipynb
+3. notebooks/preperation_and_processing.ipynb
+4. notebooks/Visualization_and_discussion.ipynb
 -->
 
 
