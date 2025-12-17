@@ -47,7 +47,7 @@ Für dein Projekt kannst du die folgenden Abschnitte in der `README.md` Datei an
 ## 📊 Projektübersicht
 
 **Problemstellung:** 
-Diese Erkrankung ist hochgradig heterogen. Patienten mit gleicher Diagnose zeigen sehr unterschiedliche metabolische Profile. Klassische Grenzwerte (z. B. HbA1c ≥ 6.5 %) erfassen diese Heterogenität nur unzureichend. Therapieeffekte senken Biomarker, Diagnose bleibt bestehen.
+Diabetes ist hochgradig heterogen. Patienten mit gleicher Diagnose zeigen sehr unterschiedliche metabolische Profile. Klassische Grenzwerte (z. B. HbA1c ≥ 6.5 %) erfassen diese Heterogenität nur unzureichend. Therapieeffekte senken Biomarker, Diagnose bleibt bestehen.
 
 **Ziel:** 
 Besser Verständnis von Risikofaktoren. Tieferes Verständnis der metabolischen Heterogenität von Diabetes und ergänzt klassische medizinische Grenzwerte durch probabilistische und clusterbasierte Erkenntnisse.
