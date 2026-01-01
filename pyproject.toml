@@ -13,6 +13,7 @@ dependencies = [
     "duckdb>=1.4.1",
     "scikit-learn>=1.7.2",
     "statsmodels>=0.14.5",
+    "ipytest>=0.14.2",
 ]
 
 [build-system]
