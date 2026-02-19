@@ -31,7 +31,7 @@ uv sync
 ### Ausführung
 
 Notebooks in dieser Reihenfolge ausführen:
-DNA classification/Human Data Sequnence.ipynb
+notebooks/DNA classification/Human Data Sequnence.ipynb
 -->
 
 
