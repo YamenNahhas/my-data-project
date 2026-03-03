@@ -18,7 +18,7 @@ Cleaning, Exploratory Data Analysis(EDA), Deal with duplicaties, Classification,
 Klone das Repository
 ```bash
 # Repository klonen
-git clone [DEIN-REPO-LINK]
+git clone https://github.com/YamenNahhas/my-data-project
 cd [REPO-NAME]
 ```
 

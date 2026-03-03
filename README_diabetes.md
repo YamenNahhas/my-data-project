@@ -18,8 +18,7 @@ Cleaning, Exploratory Data Analysis(EDA), Grouppierung, Lineare Regression, Logi
 Klone das Repository
 ```bash
 # Repository klonen
-git clone [DEIN-REPO-LINK]
-cd [REPO-NAME]
+git clone https://github.com/YamenNahhas/my-data-project
 ```
 
 Installiere [uv](https://uv.dev) (falls noch nicht installiert) und synchronisiere die Abhängigkeiten
