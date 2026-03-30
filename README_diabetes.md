@@ -30,7 +30,7 @@ uv sync
 ### Ausführung
 
 Notebooks in dieser Reihenfolge ausführen:
-1. notebooks/01_exploration.ipynb
+1. notebooks/diabetes_exploration.ipynb
 2. notebooks/diabetes_preperation_and_processing.ipynb
 3. notebooks/diabetes_visualization_and_discussion.ipynb
 -->
