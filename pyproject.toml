@@ -17,6 +17,7 @@ dependencies = [
     "jinja2>=3.1.6",
     "openpyxl>=3.1.5",
     "tensorflow>=2.21.0",
+    "wordcloud>=1.9.6",
 ]
 
 [build-system]
