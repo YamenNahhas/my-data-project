@@ -18,6 +18,7 @@ dependencies = [
     "openpyxl>=3.1.5",
     "tensorflow>=2.21.0",
     "wordcloud>=1.9.6",
+    "squarify>=0.4.4",
 ]
 
 [build-system]
