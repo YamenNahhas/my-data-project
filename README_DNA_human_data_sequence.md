@@ -1,5 +1,3 @@
-> Hier geht es um diabetes dataset von kaggle. Dieses Dataset besteht aus 100.000 Zeilen und 32 Spalten inklusiv demographics, lifestyle, medical history und clinical meaurements.
-
 ## 📊 Projektübersicht
 
 **Problemstellung:** 
